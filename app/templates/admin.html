@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>OAuth Flask Demo</title>
+    </head>
+    <body>
+        <form action="/uploadFile" method="post" name="upload" enctype="multipart/form-data">
+        <table>
+          <tr>
+              <td>Your File:</td>
+              <td><input type="file" name="file"></td>
+          </tr>
+          
+          <tr>
+                {% if url %}<p>{{ url }}</p>{% endif %}
+                {% if extension %}<p>{{ extension }}</p>{% endif %}
+                {% if size %}<p>{{ size }}</p>{% endif %}
+              <td><input type="submit" value="Upload"></td>
+          </tr>
+        </table>
+    </form>
+    </body>
+</html>
